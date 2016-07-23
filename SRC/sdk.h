@@ -26,6 +26,7 @@ using byte = unsigned char;
 namespace Dunked
 {
 	extern unsigned int __stdcall Init(void*);
+	extern void DeInit();
 }
 
 // Local Includes

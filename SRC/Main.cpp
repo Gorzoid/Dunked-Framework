@@ -19,16 +19,22 @@ unsigned int __stdcall Dunked::Init(void*)
 	g_utilList::console->Create("BRITWEBZ");
 	g_utilList::console->Visible(true);
 
-	g_utilList::console->centerPrint(color::WHITE, "*****************************************************************************\n");
-	g_utilList::console->centerPrint(color::RED, "Dunked-Framework\n");
-	g_utilList::console->centerPrint(color::WHITE, " By Phage\n");
-	g_utilList::console->centerPrint(color::WHITE, "*****************************************************************************\n");
+	g_utilList::console->centerPrint("*****************************************************************************\n");
+	g_utilList::console->centerPrint("Dunked-Framework\n");
+	g_utilList::console->centerPrint(" By Phage\n");
+	g_utilList::console->centerPrint("*****************************************************************************\n");
 	g_utilList::console->Print(" Build Date: %s\n", BUILDDATE);
 	g_utilList::console->Print(" Build Time: %s\n", BUILDTIME);
 
 	MessageBoxA(nullptr, "gay", "gay", MB_OK);
 	Beep(512, 1000);
 	return 1;
+}
+
+void Dunked::DeInit()
+{
+	delete g_utilList::console;
+	delete g_utilList::exception;
 }
 
 extern "C" int __stdcall DLLMain(HMODULE hModule, DWORD dwReason, void*)
@@ -46,6 +52,7 @@ extern "C" int __stdcall DLLMain(HMODULE hModule, DWORD dwReason, void*)
 		break;
 
 	case DLL_PROCESS_DETACH:
+		Dunked::DeInit();
 		_endthreadex(0);
 		break;
 	}
