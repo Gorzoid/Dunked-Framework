@@ -18,25 +18,6 @@ void g_console::Create(char* chTitle)
 	g_utilList::console->bOpen = false;
 }
 
-void g_console::SetColor(color eColor)
-{
-	static auto Console = GetStdHandle(STD_OUTPUT_HANDLE);
-	SetConsoleTextAttribute(Console, *reinterpret_cast<WORD*>(&eColor));
-}
-
-void g_console::Print(color eColor, std::string sMessage, ...)
-{
-	char buf[1024];
-	va_list vlist;
-	va_start(vlist, sMessage);
-	_vsnprintf(buf, sizeof(buf), sMessage.c_str(), vlist);
-	va_end(vlist);
-
-	SetColor(eColor);
-	printf("%s", buf);
-	SetColor(color::WHITE);
-}
-
 void g_console::Print(std::string sMessage, ...)
 {
 	char buf[1024];
@@ -45,19 +26,17 @@ void g_console::Print(std::string sMessage, ...)
 	_vsnprintf(buf, sizeof(buf), sMessage.c_str(), vlist);
 	va_end(vlist);
 
-	SetColor(color::WHITE);
 	printf("%s", buf);
-	SetColor(color::WHITE);
 }
 
-void g_console::centerPrint(color eColor, const char* sMessage)
+void g_console::centerPrint(const char* sMessage)
 {
 	int l = strlen(sMessage);
 	auto pos = static_cast<int>((80 - l) / 2);
 	for (auto i = 0; i<pos; i++)
-		g_utilList::console->Print(color::WHITE, " ");
+		g_utilList::console->Print(" ");
 
-	g_utilList::console->Print(eColor, sMessage);
+	g_utilList::console->Print(sMessage);
 }
 
 void g_console::Visible(bool bVisible)
