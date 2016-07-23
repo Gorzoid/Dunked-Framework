@@ -20,8 +20,8 @@ unsigned int __stdcall Dunked::Init(void*)
 	g_utilList::console->Visible(true);
 
 	g_utilList::console->centerPrint(color::WHITE, "*****************************************************************************\n");
-	g_utilList::console->centerPrint(color::RED, "B R I T  W E B Z\n");
-	g_utilList::console->centerPrint(color::WHITE, "By Senator & Phage\n");
+	g_utilList::console->centerPrint(color::RED, "Dunked-Framework\n");
+	g_utilList::console->centerPrint(color::WHITE, " By Phage\n");
 	g_utilList::console->centerPrint(color::WHITE, "*****************************************************************************\n");
 	g_utilList::console->Print(" Build Date: %s\n", BUILDDATE);
 	g_utilList::console->Print(" Build Time: %s\n", BUILDTIME);
