@@ -21,6 +21,7 @@ using byte = unsigned char;
 #include <stdlib.h> 
 #include <process.h>
 #include <string>
+#include <Psapi.h>
 
 // Namespace
 namespace Dunked
