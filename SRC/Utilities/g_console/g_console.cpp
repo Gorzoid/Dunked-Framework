@@ -10,8 +10,10 @@ void g_console::Create(char* chTitle)
 	if (!hwnd || !hMenu) return;
 	DeleteMenu(hMenu, SC_CLOSE, MF_BYCOMMAND);
 
-	freopen("CONIN$", "r", stdin);
-	freopen("CONOUT$", "w", stdout);
+	FILE* fp;
+	fp = freopen("CONIN$", "r", stdin);
+	fp = freopen("CONOUT$", "w", stdout); //-V519
+	// For anyone reading this, I use PVS static analyzer, the above supresses a warning
 
 	SetConsoleTitleA(chTitle);
 
