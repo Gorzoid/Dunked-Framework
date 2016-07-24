@@ -1,6 +1,6 @@
 #include "../../sdk.h"
 
-void * g_hook::hook(int iIndex, void* pOverride, void* pOrig, const char* szHook)
+void* g_hook::HookVMT(int iIndex, void* pOverride, void* pOrig, const char* szHook)
 {
 	g_utilList::exception->traceLastFunction(__FUNCSIG__, __FUNCDNAME__);
 
@@ -17,6 +17,22 @@ void * g_hook::hook(int iIndex, void* pOverride, void* pOrig, const char* szHook
 	g_utilList::console->Print("Hooked!\n");
 
 	return reinterpret_cast<void*>(origFunc);
+}
+
+void* g_hook::UnHookVMT(int iIndex, void* pOrig, const char* szHook)
+{
+	g_utilList::exception->traceLastFunction(__FUNCSIG__, __FUNCDNAME__);
+
+	g_utilList::console->Print(" UnHooking %s... ", szHook);
+
+	DWORD dwProtect;
+
+	auto dwVFunc = static_cast<DWORD*>(pOrig) + sizeof(DWORD) * iIndex;
+	VirtualProtect(static_cast<void*>(dwVFunc), sizeof(DWORD), PAGE_EXECUTE_READWRITE, &dwProtect);
+	*static_cast<DWORD*>(dwVFunc) = reinterpret_cast<DWORD>(pOrig);
+	VirtualProtect(static_cast<void*>(dwVFunc), sizeof(DWORD), dwProtect, &dwProtect);
+
+	return nullptr;
 }
 
 MODULEINFO g_hook::GetModuleInfo(char* szModule)
