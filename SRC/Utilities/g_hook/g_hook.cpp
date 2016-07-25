@@ -32,6 +32,8 @@ void* g_hook::UnHookVMT(int iIndex, void* pOrig, const char* szHook)
 	*static_cast<DWORD*>(dwVFunc) = reinterpret_cast<DWORD>(pOrig);
 	VirtualProtect(static_cast<void*>(dwVFunc), sizeof(DWORD), dwProtect, &dwProtect);
 
+	g_utilList::console->Print(" UnHooked!\n");
+
 	return nullptr;
 }
 
@@ -83,3 +85,5 @@ DWORD g_hook::dwFindPattern(char* hModule, char* szPattern, char* szMask, const 
 	g_utilList::console->Print("%s not found\n", szName);
 	return NULL;
 }
+
+g_hook* g_utilList::hook = new g_hook;

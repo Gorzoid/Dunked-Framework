@@ -8,3 +8,10 @@ public:
 	static MODULEINFO GetModuleInfo(char* szModule);
 	static DWORD dwFindPattern(char* hModule, char* szPattern, char* szMask, const char* szName);
 };
+
+template <typename T>
+T vfunc(void* pAddress, int iIndex)
+{
+	return (*reinterpret_cast<T**>(pAddress))[iIndex];
+}
+

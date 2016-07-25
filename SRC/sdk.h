@@ -31,6 +31,13 @@ namespace Dunked
 }
 
 // Local Includes
+// Valve Shit
+#include "Valve/bspflags.h"
+#include "Valve/dt_recv.h"
 
 // Utilities
 #include "Utilities/g_utillist.h"
+
+// Interfaces
+#include "Interfaces/g_interfacelist.h"
+

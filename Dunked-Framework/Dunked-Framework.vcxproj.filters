@@ -9,6 +9,15 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
+    <Filter Include="Header Files\Interfaces">
+      <UniqueIdentifier>{4feede45-6786-4609-9782-2f55402eb1c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Interfaces\g_chclient">
+      <UniqueIdentifier>{c901b280-0cd7-470f-b649-c845439303d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Valve">
+      <UniqueIdentifier>{daf557b2-7a23-4968-816d-bf6a986828b3}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Header Files\Utilities">
       <UniqueIdentifier>{d0159cc2-85a3-47e4-af32-65d90c4dbc2f}</UniqueIdentifier>
     </Filter>
@@ -20,6 +29,15 @@
     </Filter>
     <Filter Include="Header Files\Utilities\g_console">
       <UniqueIdentifier>{ca004c0b-c530-417f-88e4-c9ebcfcd2854}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Utilities\g_hook">
+      <UniqueIdentifier>{9d17ee36-3f8c-4809-9386-9c02278a71d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Utilities\g_netvar">
+      <UniqueIdentifier>{ba433553-e6dd-4c3b-bc3d-4523d546578d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Interfaces\g_interfacegrabber">
+      <UniqueIdentifier>{a251fd7e-992f-415e-8e2a-32da822b0d24}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -34,6 +52,21 @@
     </ClCompile>
     <ClCompile Include="..\SRC\Utilities\g_console\g_console.cpp">
       <Filter>Header Files\Utilities\g_console</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\Utilities\g_hook\g_hook.cpp">
+      <Filter>Header Files\Utilities\g_hook</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\Utilities\g_netvar\g_netvar.cpp">
+      <Filter>Header Files\Utilities\g_netvar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\Utilities\g_netvar\g_netvaroffsets.cpp">
+      <Filter>Header Files\Utilities\g_netvar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\Interfaces\g_chclient\g_chclient.cpp">
+      <Filter>Header Files\Interfaces\g_chclient</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\Interfaces\g_interfacegrabber\g_interfacegrabber.cpp">
+      <Filter>Header Files\Interfaces\g_interfacegrabber</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -51,6 +84,33 @@
     </ClInclude>
     <ClInclude Include="..\SRC\Utilities\g_console\g_console.h">
       <Filter>Header Files\Utilities\g_console</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SRC\Utilities\g_hook\g_hook.h">
+      <Filter>Header Files\Utilities\g_hook</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SRC\Interfaces\g_interfacelist.h">
+      <Filter>Header Files\Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SRC\Utilities\g_netvar\g_netvar.h">
+      <Filter>Header Files\Utilities\g_netvar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SRC\Valve\bspflags.h">
+      <Filter>Header Files\Valve</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SRC\Valve\dt_common.h">
+      <Filter>Header Files\Valve</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SRC\Valve\dt_recv.h">
+      <Filter>Header Files\Valve</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SRC\Utilities\g_netvar\g_netvaroffsets.h">
+      <Filter>Header Files\Utilities\g_netvar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SRC\Interfaces\g_chclient\g_chclient.h">
+      <Filter>Header Files\Interfaces\g_chclient</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SRC\Interfaces\g_interfacegrabber\g_interfacegrabber.h">
+      <Filter>Header Files\Interfaces\g_interfacegrabber</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

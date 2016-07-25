@@ -8,7 +8,7 @@
 	Credits to:
 		Ley - For starting the original project
 		Mythik - For giving me the idea to write my own
-		Senator@cheater.team
+		Senator@cheater.team - Tons of help, collabed with many many cheats, many more in the future
 */
 #include "sdk.h"
 
@@ -16,7 +16,7 @@ unsigned int __stdcall Dunked::Init(void*)
 {
 	g_utilList::exception->traceLastFunction(__FUNCSIG__, __FUNCDNAME__);
 
-	g_utilList::console->Create("BRITWEBZ");
+	g_utilList::console->Create("Dunked-Framework");
 	g_utilList::console->Visible(true);
 
 	g_utilList::console->centerPrint("*****************************************************************************\n");
@@ -26,14 +26,26 @@ unsigned int __stdcall Dunked::Init(void*)
 	g_utilList::console->Print(" Build Date: %s\n", BUILDDATE);
 	g_utilList::console->Print(" Build Time: %s\n", BUILDTIME);
 
-	Beep(512, 1000);
-	return 0;
+	g_Interfaces::grab->dump();
+	g_utilList::offsets->DumpNetvars();
+
+	//Beep(512, 1000);
+	return 1;
 }
 
 void Dunked::DeInit()
 {
-	delete g_utilList::console;
+	// UtilList deallocate
 	delete g_utilList::exception;
+	delete g_utilList::console;
+	delete g_utilList::hook;
+	delete g_utilList::netvar;
+	delete g_utilList::offsets;
+
+	// Interface deallocate
+	delete g_Interfaces::grab;
+	delete g_Interfaces::client;
+	delete g_Interfaces::globaldata;
 }
 
 void DLLMainInit(HMODULE hModule)
