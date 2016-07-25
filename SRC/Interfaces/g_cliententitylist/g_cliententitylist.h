@@ -161,13 +161,14 @@ class CBaseWeapon
 public:
 	const char* GetName();
 	int& GetClip1();
-	float GetAccuracy();
 	float GetNextAttackTime();
 };
 
 class CBaseEntity
 {
 public:
+	void* GetRenderableEntity();
+	void* GetNetworkEntity();
 	void* GetCollideable();
 	const Vector& GetMins();
 	const Vector& GetMaxs();
@@ -179,7 +180,7 @@ public:
 	bool CanAttack();
 	bool CanFire();
 	bool SetupBones(Matrix3x4* pBoneToWorldOut, int nMaxBones, int boneMask, float currentTime);
-	bool GetBonePosition(int iBone, Vector& vOut);
+	static bool GetBonePosition(int iBone, Vector& vOut);
 	bool GetHitboxPosition(int iHitbox, Vector& vOut);
 	bool IsDormant();
 	int GetIndex();

@@ -1,5 +1,15 @@
 #include "../../sdk.h"
 
+void* CBaseEntity::GetRenderableEntity()
+{
+	return static_cast<void*>(this + 0x4);
+}
+
+void* CBaseEntity::GetNetworkEntity()
+{
+	return static_cast<void*>(this + 0x8);
+}
+
 void* CBaseEntity::GetCollideable()
 {
 	typedef void* (__thiscall* vFuncFn)(void*);
@@ -22,7 +32,7 @@ const Vector& CBaseEntity::GetMaxs()
 
 ClientList* CBaseEntity::GetList()
 {
-	auto pNetworkEntity = static_cast<void*>(this + 0x8);
+	auto pNetworkEntity = GetNetworkEntity();
 	typedef ClientList* (__thiscall* vFuncFn)(void*);
 	return vfunc<vFuncFn>(pNetworkEntity, 2)(pNetworkEntity);
 }
@@ -54,7 +64,7 @@ bool CBaseEntity::CanFire()
 
 bool CBaseEntity::SetupBones(Matrix3x4* pBoneToWorldOut, int nMaxBones, int boneMask, float currentTime)
 {
-	auto ren = static_cast<void*>(this + 0x4);
+	auto ren = GetRenderableEntity();
 
 	typedef bool(__thiscall* vFuncFn)(void*, Matrix3x4*, int, int, float);
 	return vfunc<vFuncFn>(ren, 15)(ren, pBoneToWorldOut, nMaxBones, boneMask, currentTime);
@@ -63,9 +73,6 @@ bool CBaseEntity::SetupBones(Matrix3x4* pBoneToWorldOut, int nMaxBones, int bone
 bool CBaseEntity::GetBonePosition(int iBone, Vector& vOut)
 {
 	Matrix3x4 vMatrix[128];
-
-	if (!SetupBones(vMatrix, 128, 0x00000100, g_Interfaces::globaldata->curtime))
-		return false;
 
 	vOut.x = vMatrix[iBone][0][3];
 	vOut.y = vMatrix[iBone][1][3];
@@ -77,9 +84,6 @@ bool CBaseEntity::GetBonePosition(int iBone, Vector& vOut)
 bool CBaseEntity::GetHitboxPosition(int iHitbox, Vector& vOut)
 {
 	Matrix3x4 vMatrix[128];
-
-	if (!SetupBones(vMatrix, 128, 0x00000100, g_Interfaces::globaldata->curtime))
-		return false;
 
 	auto pModel = GetModel();
 
@@ -112,22 +116,22 @@ bool CBaseEntity::GetHitboxPosition(int iHitbox, Vector& vOut)
 
 const model_t* CBaseEntity::GetModel(void)
 {
-	auto pNetworkEntity = static_cast<void*>(this + 0x4);
+	auto pRenderableEntity = GetRenderableEntity();
 
 	typedef const model_t* (__thiscall* vFuncFn)(void*);
-	return vfunc<vFuncFn>(pNetworkEntity, 8)(pNetworkEntity);
+	return vfunc<vFuncFn>(pRenderableEntity, 8)(pRenderableEntity);
 }
 
 bool CBaseEntity::IsDormant()
 {
-	auto pNetworkEntity = static_cast<void*>(this + 0x8);
+	auto pNetworkEntity = GetNetworkEntity();
 	typedef bool(__thiscall* vFuncFn)(void*);
 	return vfunc<vFuncFn>(pNetworkEntity, 8)(pNetworkEntity);
 }
 
 int CBaseEntity::GetIndex()
 {
-	auto pNetworkEntity = static_cast<void*>(this + 0x8);
+	auto pNetworkEntity = GetNetworkEntity();
 	typedef int(__thiscall* vFuncFn)(void*);
 	return vfunc<vFuncFn>(pNetworkEntity, 9)(pNetworkEntity);
 }
@@ -174,11 +178,6 @@ const char* CBaseWeapon::GetName()
 int& CBaseWeapon::GetClip1()
 {
 	return *reinterpret_cast<int*>(reinterpret_cast<uintptr_t>(this + g_utilList::offsets->m_iClip1));
-}
-
-float CBaseWeapon::GetAccuracy()
-{
-	return *reinterpret_cast<float*>(this + 0x760);
 }
 
 float CBaseWeapon::GetNextAttackTime()
