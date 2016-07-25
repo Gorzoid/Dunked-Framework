@@ -9,6 +9,8 @@
 		Ley - For starting the original project
 		Mythik - For giving me the idea to write my own
 		Senator@cheater.team - Tons of help, collabed with many many cheats, many more in the future
+		Snipwnage - Color, Vector, Angle classes (I got lazy)
+		Daz - Tons of source engine knowledge, small optomizations
 */
 #include "sdk.h"
 
