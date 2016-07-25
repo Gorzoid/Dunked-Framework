@@ -29,7 +29,7 @@ unsigned int __stdcall Dunked::Init(void*)
 	g_Interfaces::grab->dump();
 	g_utilList::offsets->DumpNetvars();
 
-	//Beep(512, 1000);
+	Beep(512, 1000);
 	return 1;
 }
 

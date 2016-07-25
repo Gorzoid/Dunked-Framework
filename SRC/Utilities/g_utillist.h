@@ -6,6 +6,7 @@
 #include "g_hook/g_hook.h"
 #include "g_netvar/g_netvar.h"
 #include "g_netvar/g_netvaroffsets.h"
+#include "g_math/g_math.h"
 
 namespace g_utilList
 {
@@ -14,4 +15,5 @@ namespace g_utilList
 	extern g_hook* hook;
 	extern g_netvar* netvar;
 	extern g_netvaroffsets* offsets;
+	extern g_math* math;
 }

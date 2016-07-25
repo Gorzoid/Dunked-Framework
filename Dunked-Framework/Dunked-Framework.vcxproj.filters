@@ -39,6 +39,48 @@
     <Filter Include="Header Files\Interfaces\g_interfacegrabber">
       <UniqueIdentifier>{a251fd7e-992f-415e-8e2a-32da822b0d24}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Interfaces\g_cliententitylist">
+      <UniqueIdentifier>{80697033-9aaf-453a-a2c9-d1f5311aeabe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Interfaces\g_clientmode">
+      <UniqueIdentifier>{e22de5d9-90b9-4008-b852-f9362066f205}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Interfaces\g_engineclient">
+      <UniqueIdentifier>{357a4e93-d677-48d9-851c-4d0846f30c5e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Interfaces\g_prediction">
+      <UniqueIdentifier>{14ceb857-4507-47b7-8b2b-5fb32424d695}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Interfaces\g_input">
+      <UniqueIdentifier>{3041d909-9293-45a4-b2ea-73a4e210999a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Interfaces\g_modeldata">
+      <UniqueIdentifier>{2b9ec0fb-3730-4889-b7ad-14cb1e817bc8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Interfaces\g_panel">
+      <UniqueIdentifier>{206c406e-e30e-4d27-b46f-9bc726bd3fc3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Interfaces\g_cvar">
+      <UniqueIdentifier>{ba8dd8c1-51f3-473b-a963-805aadac97c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Interfaces\g_surface">
+      <UniqueIdentifier>{07230a8f-15f9-4d74-8e90-db9e1efba04e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Interfaces\g_trace">
+      <UniqueIdentifier>{025d534f-bcbb-484e-b4ee-5395dd231eff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Utilities\g_math">
+      <UniqueIdentifier>{9409852f-116f-46e2-85e2-f4a843fe4300}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Utilities\g_math\Vector">
+      <UniqueIdentifier>{7116619a-52f6-46d8-b770-09b26927da3c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Utilities\g_math\Angle">
+      <UniqueIdentifier>{20c8679a-95a6-41bc-909c-0b1b039ad38f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Utilities\g_math\Color">
+      <UniqueIdentifier>{96ca09f2-34ba-485e-8927-e0868b6b1dc4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\SRC\Main.cpp">
@@ -67,6 +109,39 @@
     </ClCompile>
     <ClCompile Include="..\SRC\Interfaces\g_interfacegrabber\g_interfacegrabber.cpp">
       <Filter>Header Files\Interfaces\g_interfacegrabber</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\Interfaces\g_cliententitylist\g_cliententitylist.cpp">
+      <Filter>Header Files\Interfaces\g_cliententitylist</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\Interfaces\g_clientmode\g_clientmode.cpp">
+      <Filter>Header Files\Interfaces\g_clientmode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\Interfaces\g_engineclient\g_engineclient.cpp">
+      <Filter>Header Files\Interfaces\g_engineclient</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\Interfaces\g_prediction\g_prediction.cpp">
+      <Filter>Header Files\Interfaces\g_prediction</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\Interfaces\g_input\g_input.cpp">
+      <Filter>Header Files\Interfaces\g_input</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\Interfaces\g_modeldata\g_modeldata.cpp">
+      <Filter>Header Files\Interfaces\g_modeldata</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\Interfaces\g_panel\g_panel.cpp">
+      <Filter>Header Files\Interfaces\g_panel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\Interfaces\g_surface\g_surface.cpp">
+      <Filter>Header Files\Interfaces\g_surface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\Interfaces\g_trace\g_trace.cpp">
+      <Filter>Header Files\Interfaces\g_trace</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\Utilities\g_math\g_math.cpp">
+      <Filter>Header Files\Utilities\g_math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\Utilities\g_math\g_cvar.cpp">
+      <Filter>Header Files\Interfaces\g_cvar</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -111,6 +186,48 @@
     </ClInclude>
     <ClInclude Include="..\SRC\Interfaces\g_interfacegrabber\g_interfacegrabber.h">
       <Filter>Header Files\Interfaces\g_interfacegrabber</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SRC\Interfaces\g_cliententitylist\g_cliententitylist.h">
+      <Filter>Header Files\Interfaces\g_cliententitylist</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SRC\Interfaces\g_clientmode\g_clientmode.h">
+      <Filter>Header Files\Interfaces\g_clientmode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SRC\Interfaces\g_engineclient\g_engineclient.h">
+      <Filter>Header Files\Interfaces\g_engineclient</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SRC\Interfaces\g_prediction\g_prediction.h">
+      <Filter>Header Files\Interfaces\g_prediction</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SRC\Interfaces\g_input\g_input.h">
+      <Filter>Header Files\Interfaces\g_input</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SRC\Interfaces\g_modeldata\g_modeldata.h">
+      <Filter>Header Files\Interfaces\g_modeldata</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SRC\Interfaces\g_panel\g_panel.h">
+      <Filter>Header Files\Interfaces\g_panel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SRC\Interfaces\g_pcvar\g_cvar.h">
+      <Filter>Header Files\Interfaces\g_cvar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SRC\Interfaces\g_surface\g_surface.h">
+      <Filter>Header Files\Interfaces\g_surface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SRC\Interfaces\g_trace\g_trace.h">
+      <Filter>Header Files\Interfaces\g_trace</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SRC\Utilities\g_math\g_math.h">
+      <Filter>Header Files\Utilities\g_math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SRC\Utilities\g_math\g_vector.h">
+      <Filter>Header Files\Utilities\g_math\Vector</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SRC\Utilities\g_math\g_angle.h">
+      <Filter>Header Files\Utilities\g_math\Angle</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SRC\Utilities\g_math\g_color.h">
+      <Filter>Header Files\Utilities\g_math\Color</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

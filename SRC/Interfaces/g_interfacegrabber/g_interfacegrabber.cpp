@@ -49,22 +49,22 @@ void g_interfacegrabber::dump()
 
 	g_Interfaces::client = static_cast<g_chclient*>(g_Interfaces::grab->getAddress("client.dll", "VClient"));
 
-	//clientmode = **reinterpret_cast<g_clientmode***>((*reinterpret_cast<DWORD**>(client))[10] + 0x5);
+	g_Interfaces::clientmode = **reinterpret_cast<g_clientmode***>((*reinterpret_cast<DWORD**>(g_Interfaces::client))[10] + 0x5);
 	g_Interfaces::globaldata = reinterpret_cast<g_globaldata*>(g_utilList::hook->dwFindPattern("client.dll", "\xA1\x00\x00\x00\x00\xD9\x40\x10\x56\x83\xEC\x08", "x????xxxxxxx", "globalddata"));
 	// \xA1\x00\x00\x00\x00\xD9\x40\x10\x56\x83\xEC\x08 x????xxxxxxx LOVE YOU DAZ FOR THE HELP <3
 
-	//prediction = static_cast<g_prediction*>(g_Interfaces::grab->getAddress("client.dll", "VClientPrediction"));
-	//entlist = static_cast<g_cliententitylist*>(g_Interfaces::grab->getAddress("client.dll", "VClientEntityList"));
-	//movement = static_cast<g_gamemovement*>(g_Interfaces::grab->getAddress("client.dll", "GameMovement"));
-	//
-	//engine = static_cast<g_cengineclient*>(g_Interfaces::grab->getAddress("engine.dll", "VEngineClient"));
-	//trace = static_cast<g_EngineTrace*>(g_Interfaces::grab->getAddress("engine.dll", "EngineTraceClient"));
-	//modeldata = static_cast<g_modeldata*>(g_Interfaces::grab->getAddress("engine.dll", "VModelInfoClient"));
-	//
-	//surface = static_cast<g_surface*>(g_Interfaces::grab->getAddress("vguimatsurface.dll", "VGUI_Surface"));
-	//panel = static_cast<g_panel*>(g_Interfaces::grab->getAddress("vgui2.dll", "VGUI_Panel"));
-	//input = static_cast<g_input*>(g_Interfaces::grab->getAddress("inputsystem.dll", "InputSystemVersion"));
-	//cvar = static_cast<g_pcvar*>(g_Interfaces::grab->getAddress("vstdlib.dll", "VEngineCvar"));	
+	g_Interfaces::prediction = static_cast<g_prediction*>(g_Interfaces::grab->getAddress("client.dll", "VClientPrediction"));
+	g_Interfaces::entlist = static_cast<g_cliententitylist*>(g_Interfaces::grab->getAddress("client.dll", "VClientEntityList"));
+	g_Interfaces::gamemovement = static_cast<g_gamemovement*>(g_Interfaces::grab->getAddress("client.dll", "GameMovement"));
+
+	g_Interfaces::engine = static_cast<g_engineclient*>(g_Interfaces::grab->getAddress("engine.dll", "VEngineClient"));
+	g_Interfaces::trace = static_cast<g_EngineTrace*>(g_Interfaces::grab->getAddress("engine.dll", "EngineTraceClient"));
+	g_Interfaces::modeldata = static_cast<g_modeldata*>(g_Interfaces::grab->getAddress("engine.dll", "VModelInfoClient"));
+
+	g_Interfaces::surface = static_cast<g_surface*>(g_Interfaces::grab->getAddress("vguimatsurface.dll", "VGUI_Surface"));
+	g_Interfaces::panel = static_cast<g_panel*>(g_Interfaces::grab->getAddress("vgui2.dll", "VGUI_Panel"));
+	g_Interfaces::input = static_cast<g_input*>(g_Interfaces::grab->getAddress("inputsystem.dll", "InputSystemVersion"));
+	g_Interfaces::cvar = static_cast<g_cvar*>(g_Interfaces::grab->getAddress("vstdlib.dll", "VEngineCvar"));	
 }
 
 g_interfacegrabber* g_Interfaces::grab = new g_interfacegrabber;

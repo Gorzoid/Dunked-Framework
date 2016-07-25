@@ -145,24 +145,49 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\SRC\Interfaces\g_chclient\g_chclient.cpp" />
+    <ClCompile Include="..\SRC\Interfaces\g_cliententitylist\g_cliententitylist.cpp" />
+    <ClCompile Include="..\SRC\Interfaces\g_clientmode\g_clientmode.cpp" />
+    <ClCompile Include="..\SRC\Interfaces\g_engineclient\g_engineclient.cpp" />
+    <ClCompile Include="..\SRC\Interfaces\g_input\g_input.cpp" />
     <ClCompile Include="..\SRC\Interfaces\g_interfacegrabber\g_interfacegrabber.cpp" />
+    <ClCompile Include="..\SRC\Interfaces\g_modeldata\g_modeldata.cpp" />
+    <ClCompile Include="..\SRC\Interfaces\g_panel\g_panel.cpp" />
+    <ClCompile Include="..\SRC\Interfaces\g_prediction\g_prediction.cpp" />
+    <ClCompile Include="..\SRC\Interfaces\g_surface\g_surface.cpp" />
+    <ClCompile Include="..\SRC\Interfaces\g_trace\g_trace.cpp" />
     <ClCompile Include="..\SRC\Main.cpp" />
     <ClCompile Include="..\SRC\Utilities\g\g.cpp" />
     <ClCompile Include="..\SRC\Utilities\g_console\g_console.cpp" />
     <ClCompile Include="..\SRC\Utilities\g_exception\g_exception.cpp" />
     <ClCompile Include="..\SRC\Utilities\g_hook\g_hook.cpp" />
+    <ClCompile Include="..\SRC\Utilities\g_math\g_cvar.cpp" />
+    <ClCompile Include="..\SRC\Utilities\g_math\g_math.cpp" />
     <ClCompile Include="..\SRC\Utilities\g_netvar\g_netvar.cpp" />
     <ClCompile Include="..\SRC\Utilities\g_netvar\g_netvaroffsets.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\SRC\Interfaces\g_chclient\g_chclient.h" />
+    <ClInclude Include="..\SRC\Interfaces\g_cliententitylist\g_cliententitylist.h" />
+    <ClInclude Include="..\SRC\Interfaces\g_clientmode\g_clientmode.h" />
+    <ClInclude Include="..\SRC\Interfaces\g_engineclient\g_engineclient.h" />
+    <ClInclude Include="..\SRC\Interfaces\g_input\g_input.h" />
     <ClInclude Include="..\SRC\Interfaces\g_interfacegrabber\g_interfacegrabber.h" />
     <ClInclude Include="..\SRC\Interfaces\g_interfacelist.h" />
+    <ClInclude Include="..\SRC\Interfaces\g_modeldata\g_modeldata.h" />
+    <ClInclude Include="..\SRC\Interfaces\g_panel\g_panel.h" />
+    <ClInclude Include="..\SRC\Interfaces\g_pcvar\g_cvar.h" />
+    <ClInclude Include="..\SRC\Interfaces\g_prediction\g_prediction.h" />
+    <ClInclude Include="..\SRC\Interfaces\g_surface\g_surface.h" />
+    <ClInclude Include="..\SRC\Interfaces\g_trace\g_trace.h" />
     <ClInclude Include="..\SRC\sdk.h" />
     <ClInclude Include="..\SRC\Utilities\g\g.h" />
     <ClInclude Include="..\SRC\Utilities\g_console\g_console.h" />
     <ClInclude Include="..\SRC\Utilities\g_exception\g_exception.h" />
     <ClInclude Include="..\SRC\Utilities\g_hook\g_hook.h" />
+    <ClInclude Include="..\SRC\Utilities\g_math\g_color.h" />
+    <ClInclude Include="..\SRC\Utilities\g_math\g_angle.h" />
+    <ClInclude Include="..\SRC\Utilities\g_math\g_vector.h" />
+    <ClInclude Include="..\SRC\Utilities\g_math\g_math.h" />
     <ClInclude Include="..\SRC\Utilities\g_netvar\g_netvar.h" />
     <ClInclude Include="..\SRC\Utilities\g_netvar\g_netvaroffsets.h" />
     <ClInclude Include="..\SRC\Utilities\g_utillist.h" />
