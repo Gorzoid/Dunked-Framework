@@ -1,7 +1,5 @@
 #pragma once
 
-class ClientList;
-
 class g_chclient
 {
 public:

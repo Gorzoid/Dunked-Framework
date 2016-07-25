@@ -49,7 +49,7 @@ void g_interfacegrabber::dump()
 
 	g_Interfaces::client = static_cast<g_chclient*>(g_Interfaces::grab->getAddress("client.dll", "VClient"));
 
-	g_Interfaces::clientmode = **reinterpret_cast<g_clientmode***>((*reinterpret_cast<DWORD**>(g_Interfaces::client))[10] + 0x5);
+	g_Interfaces::clientmode = **reinterpret_cast<void***>((*reinterpret_cast<DWORD**>(g_Interfaces::client))[10] + 0x5);
 	g_Interfaces::globaldata = reinterpret_cast<g_globaldata*>(g_utilList::hook->dwFindPattern("client.dll", "\xA1\x00\x00\x00\x00\xD9\x40\x10\x56\x83\xEC\x08", "x????xxxxxxx", "globalddata"));
 	// \xA1\x00\x00\x00\x00\xD9\x40\x10\x56\x83\xEC\x08 x????xxxxxxx LOVE YOU DAZ FOR THE HELP <3
 
@@ -63,8 +63,11 @@ void g_interfacegrabber::dump()
 
 	g_Interfaces::surface = static_cast<g_surface*>(g_Interfaces::grab->getAddress("vguimatsurface.dll", "VGUI_Surface"));
 	g_Interfaces::panel = static_cast<g_panel*>(g_Interfaces::grab->getAddress("vgui2.dll", "VGUI_Panel"));
-	g_Interfaces::input = static_cast<g_input*>(g_Interfaces::grab->getAddress("inputsystem.dll", "InputSystemVersion"));
+	g_Interfaces::input = static_cast<void*>(g_Interfaces::grab->getAddress("inputsystem.dll", "InputSystemVersion"));
 	g_Interfaces::cvar = static_cast<g_cvar*>(g_Interfaces::grab->getAddress("vstdlib.dll", "VEngineCvar"));	
 }
 
 g_interfacegrabber* g_Interfaces::grab = new g_interfacegrabber;
+void* g_Interfaces::clientmode;
+void* g_Interfaces::input;
+
