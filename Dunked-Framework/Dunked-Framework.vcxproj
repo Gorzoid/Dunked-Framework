@@ -147,6 +147,7 @@
     <ClCompile Include="..\SRC\Interfaces\g_chclient\g_chclient.cpp" />
     <ClCompile Include="..\SRC\Interfaces\g_cliententitylist\g_cliententitylist.cpp" />
     <ClCompile Include="..\SRC\Interfaces\g_cvar\g_cvar.cpp" />
+    <ClCompile Include="..\SRC\Interfaces\g_debugoverlay\g_debugoverlay.cpp" />
     <ClCompile Include="..\SRC\Interfaces\g_engineclient\g_engineclient.cpp" />
     <ClCompile Include="..\SRC\Interfaces\g_interfacegrabber\g_interfacegrabber.cpp" />
     <ClCompile Include="..\SRC\Interfaces\g_modeldata\g_modeldata.cpp" />
@@ -166,6 +167,7 @@
   <ItemGroup>
     <ClInclude Include="..\SRC\Interfaces\g_chclient\g_chclient.h" />
     <ClInclude Include="..\SRC\Interfaces\g_cliententitylist\g_cliententitylist.h" />
+    <ClInclude Include="..\SRC\Interfaces\g_debugoverlay\g_debugoverlay.h" />
     <ClInclude Include="..\SRC\Interfaces\g_engineclient\g_engineclient.h" />
     <ClInclude Include="..\SRC\Interfaces\g_interfacegrabber\g_interfacegrabber.h" />
     <ClInclude Include="..\SRC\Interfaces\g_interfacelist.h" />

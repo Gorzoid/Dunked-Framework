@@ -75,6 +75,12 @@
     <Filter Include="Header Files\Utilities\g_math\Color">
       <UniqueIdentifier>{96ca09f2-34ba-485e-8927-e0868b6b1dc4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Hooks">
+      <UniqueIdentifier>{5bb20523-d800-42f7-ae63-aa68c82b39ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Interfaces\g_debugoverlay">
+      <UniqueIdentifier>{299d2226-d3bb-4c48-8aaa-3a4b7aa1d562}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\SRC\Main.cpp">
@@ -130,6 +136,9 @@
     </ClCompile>
     <ClCompile Include="..\SRC\Interfaces\g_cvar\g_cvar.cpp">
       <Filter>Header Files\Interfaces\g_cvar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\Interfaces\g_debugoverlay\g_debugoverlay.cpp">
+      <Filter>Header Files\Interfaces\g_debugoverlay</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -210,6 +219,9 @@
     </ClInclude>
     <ClInclude Include="..\SRC\Utilities\g_math\g_color.h">
       <Filter>Header Files\Utilities\g_math\Color</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SRC\Interfaces\g_debugoverlay\g_debugoverlay.h">
+      <Filter>Header Files\Interfaces\g_debugoverlay</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

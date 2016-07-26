@@ -6,9 +6,9 @@ void g_gamemovement::ProcessMovement(CBaseEntity* pEntity, void* pMove)
 	vfunc<vFuncFn>(this, 1)(this, pEntity, pMove);
 }
 
-void g_prediction::SetupMove(CBaseEntity* pEntity, CUserCmd* pCmd, CMoveHelper* pHelper, void* move)
+void g_prediction::SetupMove(CBaseEntity* pEntity, CUserCmd* pCmd, void* pHelper, void* move)
 {
-	typedef void(__thiscall* vFuncFn)(void*, CBaseEntity*, CUserCmd*, CMoveHelper*, void*);
+	typedef void(__thiscall* vFuncFn)(void*, CBaseEntity*, CUserCmd*, void*, void*);
 	vfunc<vFuncFn>(this, 19)(this, pEntity, pCmd, pHelper, move);
 }
 

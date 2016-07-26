@@ -58,6 +58,4 @@ class g_surface2
 public:
 	void DrawTextA(unsigned long, int, int, int, const Color&, const char*, ...) const;
 	static void DrawGradient(int x, int y, int w, int h, const Color& color, int iTR = 1);
-	static bool ScreenTransform(const Vector& point, Vector& screen);
-	static bool WorldToScreen(const Vector& origin, Vector& screen);
 };

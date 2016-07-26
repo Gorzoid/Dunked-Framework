@@ -119,52 +119,5 @@ void g_surface2::DrawGradient(int x, int y, int w, int h, const Color& color, in
 	g_Interfaces::surface->DrawSetColor(255, 255, 255, 255);
 }
 
-bool g_surface2::ScreenTransform(const Vector &point, Vector &screen) // tots not pasted
-{
-	float w;
-	const auto& worldToScreen = g_Interfaces::engine->WorldToScreenMatrix();
-
-	screen.x = worldToScreen[0][0] * point[0] + worldToScreen[0][1] * point[1] + worldToScreen[0][2] * point[2] + worldToScreen[0][3];
-	screen.y = worldToScreen[1][0] * point[0] + worldToScreen[1][1] * point[1] + worldToScreen[1][2] * point[2] + worldToScreen[1][3];
-	w = worldToScreen[3][0] * point[0] + worldToScreen[3][1] * point[1] + worldToScreen[3][2] * point[2] + worldToScreen[3][3];
-	screen.z = 0.0f;
-
-	bool behind;
-
-	if (w < 0.001f)
-	{
-		behind = true;
-		screen.x *= 100000;
-		screen.y *= 100000;
-	}
-	else
-	{
-		behind = false;
-		auto invw = 1.0f / w;
-		screen.x *= invw;
-		screen.y *= invw;
-	}
-
-	return behind;
-}
-
-bool g_surface2::WorldToScreen(const Vector &origin, Vector &screen)
-{
-	if (!ScreenTransform(origin, screen))
-	{
-		int ScreenWidth, ScreenHeight;
-		g_Interfaces::engine->GetScreenSize(ScreenWidth, ScreenHeight);
-		auto x = static_cast<float>(ScreenWidth) / static_cast<float>(2);
-		auto y = static_cast<float>(ScreenHeight) / static_cast<float>(2);
-		x += 0.5f * screen.x * static_cast<float>(ScreenWidth) + 0.5f;
-		y -= 0.5f * screen.y * static_cast<float>(ScreenHeight) + 0.5f;
-		screen.x = x;
-		screen.y = y;
-		return true;
-	}
-
-	return false;
-}
-
 g_surface* g_Interfaces::surface = new g_surface;
 g_surface2* g_Interfaces::surface2 = new g_surface2;

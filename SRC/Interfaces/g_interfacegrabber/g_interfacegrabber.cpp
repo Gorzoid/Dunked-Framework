@@ -60,6 +60,7 @@ void g_interfacegrabber::dump()
 	g_Interfaces::engine = static_cast<g_engineclient*>(g_Interfaces::grab->getAddress("engine.dll", "VEngineClient"));
 	g_Interfaces::trace = static_cast<g_EngineTrace*>(g_Interfaces::grab->getAddress("engine.dll", "EngineTraceClient"));
 	g_Interfaces::modeldata = static_cast<g_modeldata*>(g_Interfaces::grab->getAddress("engine.dll", "VModelInfoClient"));
+	g_Interfaces::debugoverlay = static_cast<g_debugoverlay*>(g_Interfaces::grab->getAddress("engine.dll", "VDebugOverlay"));
 
 	g_Interfaces::surface = static_cast<g_surface*>(g_Interfaces::grab->getAddress("vguimatsurface.dll", "VGUI_Surface"));
 	g_Interfaces::panel = static_cast<g_panel*>(g_Interfaces::grab->getAddress("vgui2.dll", "VGUI_Panel"));

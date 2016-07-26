@@ -1,6 +1,5 @@
 #pragma once
 
-class CMoveHelper;
 class CMoveData
 {
 public:
@@ -16,7 +15,7 @@ public:
 class g_prediction
 {
 public:
-	void SetupMove(CBaseEntity* pEntity, CUserCmd* pCmd, CMoveHelper* pHelper, void* move);
+	void SetupMove(CBaseEntity* pEntity, CUserCmd* pCmd, void* pHelper, void* move);
 	void FinishMove(CBaseEntity* pEntity, CUserCmd* pCmd, void* move);
 };
 
