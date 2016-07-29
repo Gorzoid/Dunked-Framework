@@ -150,7 +150,6 @@
     <ClCompile Include="..\SRC\Interfaces\g_debugoverlay\g_debugoverlay.cpp" />
     <ClCompile Include="..\SRC\Interfaces\g_engineclient\g_engineclient.cpp" />
     <ClCompile Include="..\SRC\Interfaces\g_interfacegrabber\g_interfacegrabber.cpp" />
-    <ClCompile Include="..\SRC\Interfaces\g_lua\g_lua.cpp" />
     <ClCompile Include="..\SRC\Interfaces\g_modeldata\g_modeldata.cpp" />
     <ClCompile Include="..\SRC\Interfaces\g_panel\g_panel.cpp" />
     <ClCompile Include="..\SRC\Interfaces\g_prediction\g_prediction.cpp" />
@@ -164,7 +163,6 @@
     <ClCompile Include="..\SRC\Utilities\g_math\g_math.cpp" />
     <ClCompile Include="..\SRC\Utilities\g_netvar\g_netvar.cpp" />
     <ClCompile Include="..\SRC\Utilities\g_netvar\g_netvaroffsets.cpp" />
-    <ClCompile Include="g_lua.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\SRC\Interfaces\g_chclient\g_chclient.h" />
@@ -173,7 +171,6 @@
     <ClInclude Include="..\SRC\Interfaces\g_engineclient\g_engineclient.h" />
     <ClInclude Include="..\SRC\Interfaces\g_interfacegrabber\g_interfacegrabber.h" />
     <ClInclude Include="..\SRC\Interfaces\g_interfacelist.h" />
-    <ClInclude Include="..\SRC\Interfaces\g_lua\g_lua.h" />
     <ClInclude Include="..\SRC\Interfaces\g_modeldata\g_modeldata.h" />
     <ClInclude Include="..\SRC\Interfaces\g_panel\g_panel.h" />
     <ClInclude Include="..\SRC\Interfaces\g_pcvar\g_cvar.h" />
@@ -195,7 +192,6 @@
     <ClInclude Include="..\SRC\Valve\bspflags.h" />
     <ClInclude Include="..\SRC\Valve\dt_common.h" />
     <ClInclude Include="..\SRC\Valve\dt_recv.h" />
-    <ClInclude Include="g_lua.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

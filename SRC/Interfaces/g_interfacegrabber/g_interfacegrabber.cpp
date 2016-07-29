@@ -66,7 +66,6 @@ void g_interfacegrabber::dump()
 	g_Interfaces::panel = static_cast<g_panel*>(g_Interfaces::grab->getAddress("vgui2.dll", "VGUI_Panel"));
 	g_Interfaces::input = static_cast<void*>(g_Interfaces::grab->getAddress("inputsystem.dll", "InputSystemVersion"));
 	g_Interfaces::cvar = static_cast<g_cvar*>(g_Interfaces::grab->getAddress("vstdlib.dll", "VEngineCvar"));	
-	g_Interfaces::lua = new g_lua(static_cast<CLuaShared*>(g_Interfaces::grab->getAddress("lua_shared.dll", "LUASHARED")));
 }
 
 g_interfacegrabber* g_Interfaces::grab = new g_interfacegrabber;

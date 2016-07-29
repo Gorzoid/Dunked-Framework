@@ -81,9 +81,6 @@
     <Filter Include="Header Files\Interfaces\g_debugoverlay">
       <UniqueIdentifier>{299d2226-d3bb-4c48-8aaa-3a4b7aa1d562}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Interfaces\g_lua">
-      <UniqueIdentifier>{50671957-9fff-4a87-a417-9cf4c243a4d7}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\SRC\Main.cpp">
@@ -142,9 +139,6 @@
     </ClCompile>
     <ClCompile Include="..\SRC\Interfaces\g_debugoverlay\g_debugoverlay.cpp">
       <Filter>Header Files\Interfaces\g_debugoverlay</Filter>
-    </ClCompile>
-    <ClCompile Include="..\SRC\Interfaces\g_lua\g_lua.cpp">
-      <Filter>Header Files\Interfaces\g_lua</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -228,12 +222,6 @@
     </ClInclude>
     <ClInclude Include="..\SRC\Interfaces\g_debugoverlay\g_debugoverlay.h">
       <Filter>Header Files\Interfaces\g_debugoverlay</Filter>
-    </ClInclude>
-    <ClInclude Include="g_lua.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\SRC\Interfaces\g_lua\g_lua.h">
-      <Filter>Header Files\Interfaces\g_lua</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
