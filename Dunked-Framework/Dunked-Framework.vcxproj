@@ -173,7 +173,7 @@
     <ClInclude Include="..\SRC\Interfaces\g_interfacelist.h" />
     <ClInclude Include="..\SRC\Interfaces\g_modeldata\g_modeldata.h" />
     <ClInclude Include="..\SRC\Interfaces\g_panel\g_panel.h" />
-    <ClInclude Include="..\SRC\Interfaces\g_pcvar\g_cvar.h" />
+    <ClInclude Include="..\SRC\Interfaces\g_cvar\g_cvar.h" />
     <ClInclude Include="..\SRC\Interfaces\g_prediction\g_prediction.h" />
     <ClInclude Include="..\SRC\Interfaces\g_surface\g_surface.h" />
     <ClInclude Include="..\SRC\Interfaces\g_trace\g_trace.h" />
