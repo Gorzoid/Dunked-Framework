@@ -11,7 +11,6 @@
 #include "g_prediction/g_prediction.h"
 #include "g_surface/g_surface.h"
 #include "g_trace/g_trace.h"
-#include "g_lua/g_lua.h"
 
 namespace g_Interfaces
 {
@@ -33,5 +32,4 @@ namespace g_Interfaces
 	extern g_surface* surface;
 	extern g_surface2* surface2;
 	extern g_EngineTrace* trace;
-	extern g_lua* lua;
 };

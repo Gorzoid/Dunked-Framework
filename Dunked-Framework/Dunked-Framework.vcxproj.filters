@@ -205,7 +205,7 @@
     <ClInclude Include="..\SRC\Interfaces\g_panel\g_panel.h">
       <Filter>Header Files\Interfaces\g_panel</Filter>
     </ClInclude>
-    <ClInclude Include="..\SRC\Interfaces\g_cvar\g_cvar.h">
+    <ClInclude Include="..\SRC\Interfaces\g_pcvar\g_cvar.h">
       <Filter>Header Files\Interfaces\g_cvar</Filter>
     </ClInclude>
     <ClInclude Include="..\SRC\Interfaces\g_surface\g_surface.h">
