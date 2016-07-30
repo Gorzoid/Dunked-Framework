@@ -30,6 +30,17 @@ unsigned int __stdcall Dunked::Init(void*)
 
 	g_Interfaces::grab->dump();
 	g_utilList::offsets->DumpNetvars();
+	CLuaShared *lua_shared;
+	if ((lua_shared = g_Interfaces::lua->GetLuaShared()) != NULL)
+	{
+		g_utilList::console->Print("CLuaShared: 0x%i\n", g_Interfaces::lua->GetLuaShared());
+		g_utilList::console->Print("MenuState: %s\n", g_Interfaces::lua->GetMenuState() != NULL ? "found" : "null");
+		g_utilList::console->Print("ClientState: %s\n", g_Interfaces::lua->GetClientState() != NULL ? "found" : "null");
+	}
+	else
+		g_utilList::console->Print("Could not get lua_shared.\n");
+
+	g_utilList::console->Print("Done.\n");
 
 	Beep(512, 1000);
 	return 1;

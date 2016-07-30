@@ -22,6 +22,11 @@ public:
 	void SetValue(float value);
 	void SetValue(int value);
 
+	void ConcommandShit();
+
+	virtual int AllocateDLLIdentifier() = 0;
+	virtual void RegisterConCommand(ConCommandBase *pCommandBase) = 0;
+
 private:
 	char	pad[0x28];
 	float	m_flValue;
